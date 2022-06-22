@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/ModifiedInsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/PairSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestRun.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/existing/GFG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/existing/Global.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/existing/QuickSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/to_be_used/GlobalResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/to_be_used/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +148,9 @@
       <workItem from="1655624307033" duration="1603000" />
       <workItem from="1655737957222" duration="616000" />
       <workItem from="1655750703133" duration="276000" />
+      <workItem from="1655800706380" duration="520000" />
+      <workItem from="1655802280783" duration="2746000" />
+      <workItem from="1655896313083" duration="1682000" />
     </task>
     <servers />
   </component>

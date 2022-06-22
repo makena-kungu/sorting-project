@@ -5,10 +5,10 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.erickandedwin.PairSort.pairSort;
 
-@SuppressWarnings({"DuplicatedCode", "unused", "unchecked"})
+@SuppressWarnings("ALL")
 public class HybridMergeSort {
 
-    private static final int PAIRING_THRESHOLD = 10;
+    private static final int PAIRING_THRESHOLD = 32;
 
     public static void hybridSort(int @NotNull [] arr) {
         hybridSort(arr, 0, arr.length - 1);
@@ -266,10 +266,24 @@ public class HybridMergeSort {
         if (j < sizeRight) System.arraycopy(right, j, arr, k, sizeRight - j);
     }
 
+    /**
+     * @see HybridMergeSort#hybridSort(Comparable[], int, int)
+     */
     public static <T extends Comparable<T>> void hybridSort(T @NotNull [] arr) {
         hybridSort(arr, 0, arr.length - 1);
     }
 
+    /**
+     * Sorts the specified range of the specified array in ascending order using {@linkplain Comparable natural ordering}
+     * of its elements. The range to be sorted is specified by {@code fromIndex}, inclusive to {@code endIndex},
+     * exclusive. All elements in this range must implement the {@linkplain Comparable} interface
+     *
+     * @param arr       the array to be sorted
+     * @param fromIndex the index of the first element (inclusive) to be sorted.
+     * @param toIndex   the index of the last element (inclusive) to be sorted.
+     * @throws ClassCastException             if the array contains elements that cannot be compared.
+     * @throws ArrayIndexOutOfBoundsException if {@code fromIndex < 0 or toIndex >= arr.length}
+     */
     public static <T extends Comparable<T>> void hybridSort(T @NotNull [] arr, int fromIndex, int toIndex) {
         int length = toIndex - fromIndex + 1;
         if (length < 2) return;
@@ -287,28 +301,17 @@ public class HybridMergeSort {
     }
 
     @Contract(pure = true)
-    private static boolean sorted(Object @NotNull [] people) {
-        for (int i = 0, peopleLength = people.length - 1; i < peopleLength; i++) {
-            var person = ((Comparable) people[i]);
-            if (person.compareTo(people[i + 1]) > 0) {
+    private static boolean sorted(Object @NotNull [] arr) {
+        for (int i = 0, peopleLength = arr.length - 1; i < peopleLength; i++) {
+            //noinspection rawtypes
+            var person = ((Comparable) arr[i]);
+            if (person.compareTo(arr[i + 1]) > 0) {
                 return false;
             }
         }
         return true;
     }
 
-    /**
-     * Sorts the specified range of the specified array in ascending order using {@linkplain Comparable natural ordering}
-     * of its elements. The range to be sorted is specified by {@code fromIndex}, inclusive to {@code endIndex},
-     * exclusive. All elements in this range must implement the {@linkplain Comparable} interface
-     *
-     * @param arr       the array to be sorted
-     * @param fromIndex the index of the first element (inclusive) to be sorted.
-     * @param midIndex  the index of the middle element to be sorted.
-     * @param toIndex   the index of the last element (inclusive) to be sorted.
-     * @throws ClassCastException             if the array contains elements that cannot be compared.
-     * @throws ArrayIndexOutOfBoundsException if {@code fromIndex < 0 or toIndex >= arr.length}
-     */
     private static void hybridMerge(Object @NotNull [] arr, int fromIndex, int midIndex, int toIndex) {
         int sizeLeft = (midIndex + 1) - fromIndex;
         int sizeRight = toIndex - midIndex;

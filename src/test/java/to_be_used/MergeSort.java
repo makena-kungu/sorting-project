@@ -49,5 +49,4 @@ public class MergeSort {
         if (i < k) System.arraycopy(lower, i, arr, k, size1 - i);
         if (j < k) System.arraycopy(higher, j, arr, k, size2 - j);
     }
-
 }
