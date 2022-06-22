@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" afterDir="false" />
-    </list>
+    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="Adjusted the threshold size to 32" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -150,8 +150,16 @@
       <workItem from="1655750703133" duration="276000" />
       <workItem from="1655800706380" duration="520000" />
       <workItem from="1655802280783" duration="2746000" />
-      <workItem from="1655896313083" duration="1682000" />
+      <workItem from="1655896313083" duration="2635000" />
     </task>
+    <task id="LOCAL-00001" summary="Adjusted the threshold size to 32">
+      <created>1655898350905</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655898350905</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +178,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Adjusted the threshold size to 32" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted the threshold size to 32" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
