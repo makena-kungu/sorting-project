@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="Adjusted the threshold size to 32" />
+    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="Adjusted the threshold size to 32">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GeneralTestRun.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/existing/InsertionVs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/existing/LegacyJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/PairSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/PairSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testing_reliability/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testing_reliability/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/to_be_used/MergeSort.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,13 +61,14 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/IdeaProjects/SortingProject/src/test/java&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -64,7 +79,20 @@
       <recent name="com.erickandedwin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TestRunKt (1)">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="InsertionVs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="existing.InsertionVs" />
+      <module name="SortingProject.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="existing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testing_reliability.Test" />
       <module name="SortingProject.test" />
@@ -78,59 +106,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestingDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing_reliability.TestingDoubles" />
+    <configuration name="SortingProject [compileTestKotlin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileTestKotlin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GeneralTestRunKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GeneralTestRunKt" />
       <module name="SortingProject.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testing_reliability.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestingInts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing_reliability.TestingInts" />
-      <module name="SortingProject.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testing_reliability.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestingLongs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing_reliability.TestingLongs" />
-      <module name="SortingProject.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testing_reliability.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRunKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunKt" type="JetRunConfigurationType" temporary="true">
       <option name="MAIN_CLASS_NAME" value="TestRunKt" />
       <module name="SortingProject.test" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.InsertionVs" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Gradle.SortingProject [compileTestKotlin]" />
+      <item itemvalue="Kotlin.GeneralTestRunKt" />
+      <item itemvalue="Kotlin.TestRunKt" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.TestRunKt (1)" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.TestingDoubles" />
-        <item itemvalue="Application.TestingLongs" />
-        <item itemvalue="Application.TestingInts" />
+        <item itemvalue="Kotlin.GeneralTestRunKt" />
+        <item itemvalue="Application.InsertionVs" />
+        <item itemvalue="Kotlin.TestRunKt" />
+        <item itemvalue="Gradle.SortingProject [compileTestKotlin]" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +175,11 @@
       <workItem from="1655750703133" duration="276000" />
       <workItem from="1655800706380" duration="520000" />
       <workItem from="1655802280783" duration="2746000" />
-      <workItem from="1655896313083" duration="2635000" />
+      <workItem from="1655896313083" duration="3275000" />
+      <workItem from="1655988432192" duration="3759000" />
+      <workItem from="1655996008593" duration="6969000" />
+      <workItem from="1656059799210" duration="7261000" />
+      <workItem from="1656138707990" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="Adjusted the threshold size to 32">
       <created>1655898350905</created>
@@ -159,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655898350905</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adjusted the threshold size to 32">
+      <created>1655899322550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655899322550</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

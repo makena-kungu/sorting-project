@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Comparator;
 
-@SuppressWarnings({"DuplicatedCode", "unused"})
+@SuppressWarnings({"DuplicatedCode", "unused", "unchecked"})
 public class PairSort {
 
     public static void pairSort(int[] arr) {
@@ -169,11 +169,11 @@ public class PairSort {
         }
     }
 
-    public static <C extends Comparable<C>> void pairSort(C[] arr) {
+    public static void pairSort(Object[] arr) {
         pairSort(arr, 0, arr.length - 1);
     }
 
-    public static <C extends Comparable<C>> void pairSort(C[] arr, int start, int end) {
+    public static void pairSort(Object[] arr, int start, int end) {
         int length = end - start + 1;
         if (length < 2) return;
 
@@ -182,8 +182,8 @@ public class PairSort {
         while (i <= end) {
             int j = start + (i++ % 2);
             while (j < end) {
-                if (arr[j].compareTo(arr[j + 1]) > 0) {
-                    C temp = arr[j];
+                if (((Comparable<Object>) arr[j]).compareTo(arr[j + 1]) > 0) {
+                    Object temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }

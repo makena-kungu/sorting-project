@@ -9,7 +9,7 @@ import static com.erickandedwin.HybridMergeSort.hybridSort;
 import static testing_reliability.Util.*;
 
 public class Test {
-    private static final int SIZE = 100;
+    private static final int SIZE = 1000;
 
     private boolean testInts() {
         var a = generateInts(SIZE);
@@ -57,12 +57,12 @@ public class Test {
         Assertions.assertTrue(test.testDoubles());
         Assertions.assertTrue(test.testGeneral());
 
-        var a = generatePeople(5);
+        /*var a = generatePeople(5);
         print(a);
         hybridSort(a);
         Arrays.sort(a);
         System.out.println("After sorting");
-        print(a);
+        print(a);*/
     }
 
     private static <T> void print(T @NotNull [] a) {

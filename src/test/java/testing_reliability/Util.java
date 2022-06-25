@@ -6,9 +6,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Random;
 
 public class Util {
+
     public static int @NotNull [] generateInts(int size) {
+        return generateInts(size, false);
+    }
+
+    public static int @NotNull [] generateInts(int size, boolean seed) {
         int[] ints = new int[size];
-        var rnd = new Random();
+        var rnd = seed ? new Random(98235) : new Random();
         for (int i = 0; i < size; i++) {
             ints[i] = rnd.nextInt(size);
         }

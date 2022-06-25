@@ -1,28 +1,28 @@
+@file:OptIn(ExperimentalTime::class)
+@file:Suppress("SameParameterValue", "unused")
+
 import com.erickandedwin.HybridMergeSort.hybridSort
 import testing_reliability.Util.generateInts
 import to_be_used.MergeSort.mergeSort
-import java.util.Arrays.sort
 import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
-private const val SIZE = 10000000
+private const val SIZE = 1_000_000
+private const val DEFAULT_SEED = 0
+private const val SEED = 34645
 
-@OptIn(ExperimentalTime::class)
 fun main() {
 
-    val arr = generateInts(SIZE)
-    val clone = arr.clone()
-    val clone2 = arr.clone()
-    //val clone3 = arr.clone()
-    val clone4 = arr.clone()
+    val arr = generateInts(SIZE, true)
+    System.gc()
+    print("hybrid time           =", arr.clone()) { hybridSort(it) }
+    System.gc()
+    print("merge time            =", arr.clone()) { mergeSort(it) }
+//    print("pair time             =") { if (it.size <= 10000) pairSort(it) }
+//    print("default time          =") { sort(it) }
+//    print("hybrid time  modified =") { hybridSortM(it) }
+}
 
-    //val pairSort = measureTime { pairSort(clone3) }
-    val timeMerge = measureTime { mergeSort(clone) }
-    val de = measureTime { sort(clone2) }
-    val timeHybrid = measureTime { hybridSort(clone4) }
-
-    println("merge time = $timeMerge")
-//    println("pair time  = $pairSort")
-    println("de time    = $de")
-    println("hybrid time = $timeHybrid")
+private inline fun print(what: String, array: IntArray, func: (IntArray) -> Unit) {
+    println("$what ${measureTime { func(array) }}")
 }
