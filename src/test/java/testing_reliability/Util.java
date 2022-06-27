@@ -96,7 +96,7 @@ public class Util {
         var rnd = new Random();
         for (int i = 0; i < size; i++) {
             people[i] = new Person(
-                    "Person" + rnd.nextInt(0, size >>> 1),
+                    "Person " + rnd.nextInt(0, size >>> 1),
                     rnd.nextInt(0, 22),
                     rnd.nextFloat(0, 7.7F),
                     rnd.nextFloat(0, 150)

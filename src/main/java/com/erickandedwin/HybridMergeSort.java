@@ -3,6 +3,7 @@ package com.erickandedwin;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.GenericDeclaration;
 import java.util.Arrays;
 
 import static com.erickandedwin.PairSort.pairSort;
@@ -322,14 +323,18 @@ public class HybridMergeSort {
      */
     public static void hybridSort(Object[] arr) {
         Object[] aux = Arrays.copyOfRange(arr, 0, arr.length);
-        hybridSort(aux, arr, 0, arr.length - 1);
+        hybridSort(aux, arr, 0, arr.length, -0);
     }
 
     /**
      * Sorts the specified range of the specified array in ascending order using {@linkplain Comparable natural ordering}
      * of its elements. The range to be sorted is specified by {@code fromIndex}, inclusive to {@code endIndex},
-     * exclusive. All elements in this range must implement the {@linkplain Comparable} interface
+     * exclusive. All elements in this range must implement the {@linkplain Comparable} interface, otherwise a
+     * {@linkplain ClassCastException} will be thrown. The sort is stable meaning the order of equal elements does not
+     * change.
      *
+     * @param src       a copy of the array that will be used in holding the items temporarily before insertion into the
+     *                  {@code dest}.
      * @param dest      the array to be sorted
      * @param fromIndex the index of the first element (inclusive) to be sorted.
      * @param toIndex   the index of the last element (inclusive) to be sorted.
@@ -356,20 +361,73 @@ public class HybridMergeSort {
         }
 
         // Merge sorted halves (now in src) into dest
-        for (int i = fromIndex, p = fromIndex, q = midIndex, high = toIndex +1; i < high; i++) {
-            if (q >= high || p < midIndex && ((Comparable) src[p]).compareTo(src[q]) <= 0)
+        int i = fromIndex, j = fromIndex, k = midIndex, high = toIndex + 1;
+        for (; i < high; i++) {
+            if (k >= high || j < midIndex && ((Comparable) src[j]).compareTo(src[k]) <= 0)
+                dest[i] = src[j++];
+            else
+                dest[i] = src[k++];
+        }
+    }
+
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    public static void hybridSort(Object[] src,
+                                  Object[] dest,
+                                  int low,
+                                  int high,
+                                  int off) {
+        int length = high - low;
+
+        // Insertion sort on smallest arrays
+        if (length <= PAIRING_THRESHOLD) {
+            for (int i = low; i < high; i++) {
+                for (int j = low + (i % 2); j < high - 1; j++) {
+                    Comparable temp = ((Comparable) dest[j]);
+                    if (temp.compareTo(dest[j + 1]) > 0) {
+                        swap(dest, j, j + 1);
+                    }
+                }
+            }
+            return;
+        }
+
+        // Recursively sort halves of dest into src
+        int destLow = low;
+        int destHigh = high;
+        low += off;
+        high += off;
+        int mid = (low + high) >>> 1;
+        hybridSort(dest, src, low, mid, -off);
+        hybridSort(dest, src, mid, high, -off);
+
+        // If list is already sorted, just copy from src to dest.  This is an
+        // optimization that results in faster sorts for nearly ordered lists.
+        if (((Comparable) src[mid - 1]).compareTo(src[mid]) <= 0) {
+            System.arraycopy(src, low, dest, destLow, length);
+            return;
+        }
+
+        // Merge sorted halves (now in src) into dest
+        for (int i = destLow, p = low, q = mid; i < destHigh; i++) {
+            if (q >= high || p < mid && ((Comparable) src[p]).compareTo(src[q]) <= 0)
                 dest[i] = src[p++];
             else
                 dest[i] = src[q++];
         }
     }
 
+    private static void swap(Object @NotNull [] x, int a, int b) {
+        Object t = x[a];
+        x[a] = x[b];
+        x[b] = t;
+    }
+
     @Contract(pure = true)
     private static boolean sorted(Object @NotNull [] arr) {
-        for (int i = 0, peopleLength = arr.length - 1; i < peopleLength; i++) {
+        for (int i = 0, length = arr.length - 1; i < length; i++) {
             //noinspection rawtypes
-            var person = ((Comparable) arr[i]);
-            if (person.compareTo(arr[i + 1]) > 0) {
+            Comparable obj = ((Comparable) arr[i]);
+            if (obj.compareTo(arr[i + 1]) > 0) {
                 return false;
             }
         }

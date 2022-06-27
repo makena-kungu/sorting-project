@@ -11,14 +11,14 @@ public record Person(
 
     @Override
     public int compareTo(@NotNull Person o) {
-        int a = Integer.compare(age, o.age);
-        if (a != 0) {
-            return a;
-        }
-
         int s = name.compareTo(o.name);
         if (s != 0) {
             return s;
+        }
+
+        int a = Integer.compare(age, o.age);
+        if (a != 0) {
+            return a;
         }
 
         int h = Float.compare(height, o.height);

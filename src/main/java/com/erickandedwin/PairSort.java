@@ -173,6 +173,7 @@ public class PairSort {
         pairSort(arr, 0, arr.length - 1);
     }
 
+    @SuppressWarnings("rawtypes")
     public static void pairSort(Object[] arr, int start, int end) {
         int length = end - start + 1;
         if (length < 2) return;
@@ -182,7 +183,7 @@ public class PairSort {
         while (i <= end) {
             int j = start + (i++ % 2);
             while (j < end) {
-                if (((Comparable<Object>) arr[j]).compareTo(arr[j + 1]) > 0) {
+                if (((Comparable) arr[j]).compareTo(arr[j + 1]) > 0) {
                     Object temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
