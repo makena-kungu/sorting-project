@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="Test runs">
-      <change afterPath="$PROJECT_DIR$/src/test/java/misc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/misc/Testing.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/time_analysis/Main.kt" afterDir="false" />
+    <list default="true" id="a37475e4-ead9-4d9c-841a-17ef5c4bc9ad" name="Changes" comment="the test class and Bursary class">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/HybridMergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/PairSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/PairSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GeneralTestRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GeneralTestRun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/existing/LegacyJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/existing/LegacyJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testing_reliability/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testing_reliability/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testing_reliability/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testing_reliability/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/usecase/Bursary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/usecase/Bursary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/erickandedwin/usecase/TestKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/erickandedwin/usecase/TestKit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +20,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Object" />
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="erick" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,21 +60,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/LENOVO/IdeaProjects/SortingProject/src/test/java",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/IdeaProjects/SortingProject/src/test/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LENOVO\IdeaProjects\SortingProject\src\test\java" />
@@ -81,13 +86,13 @@
       <recent name="com.erickandedwin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing_reliability.Test" />
-      <module name="SortingProject.test" />
+  <component name="RunManager" selected="Application.TestKit">
+    <configuration name="TestKit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.erickandedwin.usecase.TestKit" />
+      <module name="SortingProject.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="testing_reliability.*" />
+          <option name="PATTERN" value="com.erickandedwin.usecase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,7 +130,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.TestKit" />
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.TestingKt" />
       <item itemvalue="Kotlin.GeneralTestRunKt" />
@@ -133,11 +138,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestKit" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.GeneralTestRunKt" />
         <item itemvalue="Kotlin.TestingKt" />
         <item itemvalue="Kotlin.TestRunKt" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +168,9 @@
       <workItem from="1656059799210" duration="7261000" />
       <workItem from="1656138707990" duration="10224000" />
       <workItem from="1656316148330" duration="11744000" />
+      <workItem from="1656523687070" duration="6333000" />
+      <workItem from="1656873625410" duration="7605000" />
+      <workItem from="1656925978549" duration="7250000" />
     </task>
     <task id="LOCAL-00001" summary="Adjusted the threshold size to 32">
       <created>1655898350905</created>
@@ -185,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656141508070</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test runs">
+      <created>1656926543392</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656926543392</updated>
+    </task>
+    <task id="LOCAL-00005" summary="the test class and Bursary class">
+      <created>1656926662270</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656926662270</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +218,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="kinuthia" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -207,7 +241,8 @@
     <MESSAGE value="Adjusted the threshold size to 32" />
     <MESSAGE value="Optimising the merging process" />
     <MESSAGE value="Test runs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test runs" />
+    <MESSAGE value="the test class and Bursary class" />
+    <option name="LAST_COMMIT_MESSAGE" value="the test class and Bursary class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
