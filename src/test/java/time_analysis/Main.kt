@@ -6,6 +6,7 @@ import com.erickandedwin.HybridMergeSort.hybridSort
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
+import org.apache.poi.ss.usermodel.Row
 import org.apache.poi.ss.usermodel.Workbook
 import org.apache.poi.xssf.usermodel.XSSFFont
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
@@ -47,36 +48,37 @@ fun main() {
                 runBlocking {
                     awaitAll(
                         async {
-                            row.createCell(1).run {
-                                val time = measureNanoTime { mergeSort(arr) }
-                                merge += time
-                                setCellValue(time.nanoseconds.toString())
-                            }
-                        },async {
-                            row.createCell(2).run {
-                                val time = measureNanoTime { hybridSort(arr) }
-                                hybrid += time
-                                setCellValue(time.nanoseconds.toString())
-                            }
+                            row.createCell(1, merge){ mergeSort(arr) }
+                        }, async {
+                            row.createCell(2, hybrid){ hybridSort(arr) }
                         }
                     )
                 }
             }
 
             val averageRow = sheet.createRow(11)
-            averageRow.createCell(0).run {
-                setCellValue("Average")
-            }
-            averageRow.createCell(1).run {
-                val average = merge.average().roundToLong().nanoseconds
-                setCellValue(average.toString())
-            }
-            averageRow.createCell(2).run {
-                val average = hybrid.average().roundToLong().nanoseconds
-                setCellValue(average.toString())
-            }
+            averageRow.createCell(0, "Average")
+            averageRow.createCell(1, merge)
+            averageRow.createCell(2, hybrid)
         }
     }
+}
+
+fun Row.createCell(column: Int, value: String) {
+    createCell(column).setCellValue(value)
+}
+
+fun Row.createCell(column: Int, list: MutableList<Long>) {
+    createCell(column).apply {
+        val average = list.average().roundToLong().nanoseconds
+        setCellValue(average.toString())
+    }
+}
+
+fun Row.createCell(column: Int, list: MutableList<Long>, block: () -> Unit) {
+    val time = measureNanoTime(block)
+    list += time
+    createCell(column, time.nanoseconds.toString())
 }
 
 fun createWorkBook(block: Workbook.() -> Unit) {

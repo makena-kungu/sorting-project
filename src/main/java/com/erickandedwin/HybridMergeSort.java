@@ -3,7 +3,6 @@ package com.erickandedwin;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.GenericDeclaration;
 import java.util.Arrays;
 
 import static com.erickandedwin.PairSort.pairSort;
